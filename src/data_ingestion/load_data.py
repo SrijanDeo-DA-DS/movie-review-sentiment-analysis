@@ -72,8 +72,8 @@ def main():
         ## data ingestion
         df = load_data(json_files)
         df1 = preprocess_data(df)
-        #test_size = load_params(params_path='params1.yaml')
-        save_data(df1, 0.2, processed_data_path)
+        test_size = load_params(params_path='params1.yaml')
+        save_data(df1, test_size, processed_data_path)
     
     except Exception as e:
         raise custom_exception(e,sys)
